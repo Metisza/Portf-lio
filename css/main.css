@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #e782ce;
+    --secondy-color: #24262f;
+    --font-color: #4e525a;
+    --background-color: #f5f5f5;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.emphasis {
+    color: var(--primary-color);
+}
+
+body {
+    background-image: url("/imagens/background.jpg");
+    /* background-color: var(--background-color);*/
+    color: var(--font-color);
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 15%;
+    margin-left: 15%;
+
+    button {
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.75rem;
+        transition: background-color 0.3s ease;
+
+        &.primary {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        &.outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        &:hover {
+            background-color: var(--primary-color, 60%);
+            border-color: #24262f;
+        }
+    }
+
+    header {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        nav {
+            flex: 1;
+            font-size: 1.5rem;
+
+            ul {
+                display: flex;
+                gap: 3rem;
+                justify-content: center;
+                cursor: pointer;
+
+                li {
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+
+    #hero {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-start;
+        justify-items: flex-end;
+        margin-top: 5rem;
+        margin-bottom: 10rem;
+        padding-right: 5rem;
+
+
+        article {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+
+            >p {
+                font-size: 1.5rem;
+                line-height: 1.8rem;
+            }
+
+            .title {
+                color: var(--secondy-color);
+                font-size: 5.5rem;
+                font-weight: bolder;
+                line-height: 3.5rem;
+            }
+        }
+
+        .frame {
+            align-items: center;
+            border: 1px solid var(--primary-color);
+            border-radius: 90%;
+            display: flex;
+            justify-content: center;
+            width: 400px;
+            height: 400px;
+
+
+            img {
+                width: 80%;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: 100%;
+            }
+        }
+    }
+
+    .projetos {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+        padding: 2rem;
+
+        img {
+            width: 100%;
+            height: 250px;
+            border-radius: 1.5rem;
+            display: block;
+            object-fit: cover;
+        }
+
+        .subtitulo {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+        }
+
+        .alinhamento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+            justify-content: center;
+
+        }
+
+        .projeto {
+            width: 100%;
+            max-width: 450px;
+            text-align: left;
+            text-align: center;
+        }
+    }
+
+    .exp {
+        padding: 3rem 0;
+        margin-bottom: 5rem;
+
+        /* wrapper interno para controle */
+        .alinhamento {
+            max-width: 1100px;
+            padding: 0 1rem;
+        }
+
+        /* título sozinho em cima */
+        .exp-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin: 0 0 1.5rem 0;
+        }
+
+        /* corpo abaixo do título: colunas (esquerda buttons, direita conteúdo) */
+        .exp-body {
+            display: flex;
+            gap: 3rem;
+            align-items: flex-start;
+            /* texto começa no topo */
+        }
+
+        /* lista de botões - coluna esquerda */
+        .empresas {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            min-width: 160px;
+            position: relative;
+            /* cria o contexto para o ::before */
+            padding-left: 1.5rem;
+            /* espaço pra barra não sobrepor o texto */
+        }
+
+        .empresas::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            /* espessura da barra */
+            height: 100%;
+            background-color: var(--primary-color, #a259ff);
+            /* cor da barra */
+            border-radius: 2px;
+        }
+
+        /* aparência dos botões */
+        .empresa {
+            display: inline-block;
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            color: #666;
+            text-align: left;
+            transition: color 0.18s;
+        }
+
+        .empresa.ativa {
+            color: var(--primary-color, #d16fbf);
+            font-weight: 700;
+        }
+
+        /* coluna direita (conteúdo) */
+        .descricao {
+            flex: 1;
+        }
+
+        /* controla visibilidade dos conteúdos */
+        .conteudo {
+            display: none;
+        }
+
+        .conteudo.ativo {
+            display: block;
+        }
+
+        /* responsivo: empilha em telas pequenas */
+        @media (max-width: 840px) {
+            .exp-body {
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+
+            .empresas {
+                flex-direction: row;
+                gap: 1rem;
+                min-width: auto;
+            }
+
+            .empresa {
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    }
+
+    .habilidades {
+        margin-bottom: 5rem;
+
+        .alinhamento {
+            padding: 0 1rem;
+        }
+
+        .hab-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin: 0 0 1.5rem 0;
+        }
+
+        .body {
+            padding: 0;
+            margin: 0;
+            height: auto;
+            width: max-content;
+            display: flex;
+            gap: 6rem;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing:content-box;
+
+            div h4{
+                font-size: 1.8rem;
+                text-align: left;
+            }
+        }
+    }
+
+    .hystory {
+        margin-bottom: 5rem;
+
+        .hystory-title {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            margin: 0 0 1.5rem 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .footer {
+
+         nav {
+            flex: 1;
+            font-size: 1.5rem;
+            margin-bottom: 5rem;
+
+            ul {
+                display: flex;
+                gap: 3rem;
+                justify-content: left;
+                cursor: pointer;
+
+                li {
+                    font-weight: 500;
+
+                    &:hover {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
+}
