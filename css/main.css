@@ -1,586 +1,527 @@
+@charset "UTF-8";
+/* =============================
+   🌸 RESET & VARIÁVEIS GERAIS
+   ============================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --primary-color: #e782ce;
-    --secondy-color: #24262f;
-    --font-color: #4e525a;
-    --background-color: #f5f5f5;
-}
-
-ul,
-li {
-    list-style: none;
-
-}
-
-.emphasis {
-    color: var(--primary-color);
+  --primary-color: #e782ce;
+  --secondy-color: #24262f;
+  --font-color: #4e525a;
+  --background-color: #f5f5f5;
 }
 
 body {
-    background-image: url("/imagens/background.jpg");
-    /* background-color: var(--background-color);*/
-    color: var(--font-color);
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-right: 15%;
-    margin-left: 15%;
-
-    button {
-        border: 1px solid transparent;
-        border-radius: 1rem;
-        cursor: pointer;
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 0.75rem;
-        transition: background-color 0.3s ease;
-
-        &.primary {
-            background-color: var(--primary-color);
-            color: #fff;
-        }
-
-        &.outline {
-            background-color: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        &:hover {
-            background-color: var(--primary-color, 60%);
-            border-color: #24262f;
-            color: var(--background-color);
-        }
-    }
-
-    header,
-    ul {
-        display: flex;
-    }
-
-    header {
-        padding: 1rem;
-        align-items: center;
-        justify-content: space-between;
-
-        div {
-            font-weight: 700;
-            font-size: 2rem;
-        }
-
-        nav {
-            flex: 1;
-            font-size: 1.5rem;
-
-            ul {
-                gap: 3rem;
-                justify-content: center;
-                cursor: pointer;
-
-                li {
-                    font-weight: 500;
-
-                    &:hover {
-                        color: var(--primary-color);
-                    }
-                }
-            }
-        }
-    }
-
-    header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 6rem;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--primary-color);
+  background-image: url("/imagens/background.jpg");
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 15%;
+  /* =============================
+     💗 HEADER
+     ============================= */
+  /* 🌸 HEADER - MOBILE */
+  /* 💻 HEADER - TABLET */
+  /* =============================
+     🌷 HERO SECTION
+     ============================= */
+  /* 🌸 HERO - MOBILE */
+  /* 💻 HERO - TABLET */
 }
-
-/* Nome com o ponto colorido */
-header .emphasis {
-    color: var(--secondy-color);
+body .emphasis {
+  color: var(--primary-color);
 }
-
-/* Navegação */
-header nav ul {
-    display: flex;
-    gap: 3rem;
-    list-style: none;
+body ul,
+body li {
+  list-style: none;
 }
-
-header nav ul li {
-    cursor: pointer;
-    transition: 0.3s;
+body button {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  transition: background-color 0.3s ease;
 }
-
-header nav ul li:hover {
-    color: var(--secondy-color);
+body button.primary {
+  background-color: var(--primary-color);
+  color: #fff;
 }
-
-/* 🌸 MOBILE (até 600px) */
+body button.outline {
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+body button:hover {
+  background-color: var(--primary-color, 60%);
+  border-color: #24262f;
+  color: var(--background-color);
+}
+body header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header div {
+  font-weight: 700;
+  font-size: 2rem;
+}
+body header nav {
+  flex: 1;
+  font-size: 1.5rem;
+}
+body header nav ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  cursor: pointer;
+}
+body header nav ul li {
+  font-weight: 500;
+}
+body header nav ul li:hover {
+  color: var(--primary-color);
+}
 @media screen and (max-width: 600px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-    header nav ul {
-        flex-direction: column;
-        gap: 1rem;
-        font-size: 1.8rem;
-    }
+  body header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  body header nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.8rem;
+  }
 }
-
-/* 💻 TABLET / MÉDIA (de 601px até 1024px) */
 @media screen and (max-width: 1024px) and (min-width: 601px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-        padding: 3rem;
-    }
-
-    header nav ul {
-        flex-direction: row; /* ainda lado a lado, mas centralizado */
-        gap: 2rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: 1.9rem;
-    }
+  body header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 3rem;
+  }
+  body header nav ul {
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.9rem;
+  }
+}
+body #hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 5rem 0 10rem;
+}
+body #hero article {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 5rem;
+}
+body #hero article .apresentacao-p p {
+  font-size: 5rem;
+  line-height: 5rem;
+}
+body #hero article .title {
+  color: var(--secondy-color);
+  font-size: 5.5rem;
+  font-weight: bolder;
+  line-height: 3.5rem;
+}
+body #hero article .buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+body #hero .frame {
+  align-items: center;
+  border: 1px solid var(--primary-color);
+  border-radius: 90%;
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  margin-left: 5rem;
+}
+body #hero .frame img {
+  width: 80%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+@media screen and (max-width: 600px) {
+  body #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+  }
+  body #hero .frame {
+    order: -1;
+    margin-left: 0;
+    width: 250px;
+    height: 250px;
+  }
+  body #hero article {
+    order: 2;
+  }
+  body #hero article .apresentacao-p p,
+  body #hero article .title {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+  body #hero article .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  body #hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    margin: 4rem 0 8rem;
+  }
+  body #hero .frame {
+    margin-left: 0;
+    width: 320px;
+    height: 320px;
+  }
+  body #hero article {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+  }
+  body #hero article .apresentacao-p p {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  body #hero article .title {
+    font-size: 4.8rem;
+    line-height: 3.8rem;
+  }
+  body #hero article .buttons {
+    justify-content: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
 }
 
-
-    #hero {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 5rem;
-        margin-bottom: 10rem;
-
-        article {
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 5rem;
-
-            .apresentacao-p p {
-                font-size: 5rem;
-                line-height: 5rem;
-            }
-
-            .title {
-                color: var(--secondy-color);
-                font-size: 5.5rem;
-                font-weight: bolder;
-                line-height: 3.5rem;
-            }
-        }
-
-        .frame {
-            align-items: center;
-            border: 1px solid var(--primary-color);
-            border-radius: 90%;
-            display: flex;
-            justify-content: center;
-            width: 400px;
-            height: 400px;
-            margin-left: 5rem;
-
-
-            img {
-                width: 80%;
-                aspect-ratio: 1/1;
-                object-fit: cover;
-                border-radius: 100%;
-            }
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        #hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        /* Foto primeiro */
-        #hero .frame {
-            order: -1;
-            margin-left: 0;
-            width: 250px;
-            height: 250px;
-        }
-
-        #hero article {
-            order: 2;
-        }
-
-        #hero article .apresentacao-p p,
-        #hero article .title {
-            font-size: 3rem;
-            line-height: 3rem;
-        }
-    }
-
-    /* 🌸 MOBILE (até 600px) */
-    @media screen and (max-width: 600px) {
-        #hero {
-            display: flex;
-            flex-direction: column-reverse;
-            /* Foto primeiro */
-            align-items: center;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        #hero .frame {
-            margin-left: 0;
-            width: 250px;
-            height: 250px;
-        }
-
-        #hero article {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        #hero article .apresentacao-p p,
-        #hero article .title {
-            font-size: 3rem;
-            line-height: 3rem;
-        }
-
-        #hero article .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-    }
-
-    /* 🌸 MOBILE (até 600px) */
-    @media screen and (max-width: 600px) {
-        #hero {
-            display: flex;
-            flex-direction: column;
-            /* Foto primeiro */
-            align-items: center;
-            gap: 3rem;
-            text-align: center;
-        }
-
-        #hero .frame {
-            margin-left: 0;
-            width: 250px;
-            height: 250px;
-        }
-
-        #hero article {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        #hero article .apresentacao-p p,
-        #hero article .title {
-            font-size: 3rem;
-            line-height: 3rem;
-        }
-
-        #hero article .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-    }
-
-    /* 💻 TABLET / MÉDIA (de 601px até 1024px) */
-    @media screen and (max-width: 1024px) and (min-width: 601px) {
-        #hero {
-            display: flex;
-            flex-direction: column-reverse;
-            /* Foto primeiro, igual ao mobile 💕 */
-            align-items: center;
-            text-align: center;
-            gap: 4rem;
-            margin-top: 4rem;
-            margin-bottom: 8rem;
-        }
-
-        #hero .frame {
-            margin-left: 0;
-            width: 320px;
-            height: 320px;
-        }
-
-        #hero article {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            font-size: 1.8rem;
-        }
-
-        #hero article .apresentacao-p p {
-            font-size: 4rem;
-            line-height: 4rem;
-        }
-
-        #hero article .title {
-            font-size: 4.8rem;
-            line-height: 3.8rem;
-        }
-
-        #hero article .buttons {
-            display: flex;
-            justify-content: center;
-            /* ✨ Centraliza os botões */
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-    }
-
-
-    .projeto {
-
-        h1 {
-            margin-bottom: 3rem;
-            font-size: clamp(2.4rem, 5vw, 4rem);
-        }
-
-        img {
-            width: 100%;
-            height: 250px;
-            border-radius: 1.5rem;
-            display: block;
-            object-fit: cover;
-        }
-
-        .subtitulo {
-            font-size: 2rem;
-            font-weight: 500;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        .alinhamento {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-            gap: 3rem;
-            justify-content: center;
-
-        }
-
-        .projetos {
-            margin-bottom: 1rem;
-            width: 100%;
-            text-align: left;
-        }
-    }
-
-    .exp {
-        padding: 3rem 0;
-        margin-bottom: 5rem;
-
-        /* wrapper interno para controle */
-        .alinhamento {
-            max-width: 1100px;
-            padding: 0 1rem;
-        }
-
-        /* título sozinho em cima */
-        .exp-title {
-            font-size: clamp(2.4rem, 5vw, 4rem);
-            margin: 0 0 1.5rem 0;
-        }
-
-        /* corpo abaixo do título: colunas (esquerda buttons, direita conteúdo) */
-        .exp-body {
-            display: flex;
-            gap: 3rem;
-            align-items: flex-start;
-            /* texto começa no topo */
-        }
-
-        /* lista de botões - coluna esquerda */
-        .empresas {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            min-width: 160px;
-            position: relative;
-            /* cria o contexto para o ::before */
-            padding-left: 1.5rem;
-            /* espaço pra barra não sobrepor o texto */
-        }
-
-        .empresas::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 3px;
-            /* espessura da barra */
-            height: 100%;
-            background-color: var(--primary-color, #a259ff);
-            /* cor da barra */
-            border-radius: 2px;
-        }
-
-        /* aparência dos botões */
-        .empresa {
-            display: inline-block;
-            background: none;
-            border: none;
-            padding: 0;
-            font: inherit;
-            cursor: pointer;
-            color: #666;
-            text-align: left;
-            transition: color 0.18s;
-        }
-
-        .empresa.ativa {
-            color: var(--primary-color, #d16fbf);
-            font-weight: 700;
-        }
-
-        /* coluna direita (conteúdo) */
-        .descricao {
-            flex: 1;
-        }
-
-        /* controla visibilidade dos conteúdos */
-        .conteudo {
-            display: none;
-        }
-
-        .conteudo.ativo {
-            display: block;
-        }
-
-        /* responsivo: empilha em telas pequenas */
-        @media (max-width: 840px) {
-            .exp-body {
-                flex-direction: column;
-                gap: 1.25rem;
-            }
-
-            .empresas {
-                flex-direction: row;
-                gap: 1rem;
-                min-width: auto;
-            }
-
-            .empresa {
-                padding: 0.25rem 0.5rem;
-            }
-        }
-    }
-
-    .habilidades {
-        margin-bottom: 5rem;
-
-        .hab-title {
-            font-size: clamp(2.4rem, 5vw, 4rem);
-        }
-
-        .body {
-            height: auto;
-            display: flex;
-            gap: 4rem;
-            align-items: center;
-            justify-content: space-around;
-
-            div h4 {
-                font-size: 2rem;
-                text-align: center;
-                font-size: 2rem;
-            }
-
-            p {
-                text-align: center;
-            }
-
-            @media (max-width: 840px) {
-                .alinhamento {
-                    flex-direction: column;
-                    gap: 1.25rem;
-                }
-            }
-        }
-
-        .hystory {
-            margin-bottom: 5rem;
-
-            .hystory-title {
-                font-size: clamp(2.4rem, 5vw, 4rem);
-                margin: 0 0 1.5rem 0;
-            }
-
-            p {
-                margin-bottom: 1rem;
-            }
-        }
-
-        .footer {
-
-            nav {
-                flex: 1;
-                font-size: 1.5rem;
-                margin-bottom: 5rem;
-
-                ul {
-                    display: flex;
-                    gap: 3rem;
-                    justify-content: left;
-                    cursor: pointer;
-
-                    li {
-                        font-weight: 500;
-
-                        &:hover {
-                            color: var(--primary-color);
-                        }
-                    }
-                }
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            body {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 500px;
-            }
-        }
-    }
+/* =============================
+   💻 PROJETOS
+   ============================= */
+.projeto {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  text-align: left;
+  /* 🌸 PROJETOS - MOBILE */
+  /* 💻 PROJETOS - TABLET */
 }
+.projeto h1 {
+  margin-bottom: 3rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.projeto h1 .emphasis {
+  color: var(--primary-color);
+}
+.projeto .alinhamento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  justify-content: center;
+}
+.projeto .projetos {
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.projeto .projetos img {
+  width: 100%;
+  height: 250px;
+  border-radius: 1.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.projeto .projetos .subtitulo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.projeto .projetos p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .projeto {
+    padding: 4rem 2rem;
+  }
+  .projeto h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+  .projeto .alinhamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .projeto .projetos {
+    width: 100%;
+    max-width: 350px;
+    padding: 2rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .projeto {
+    padding: 5rem 4rem;
+  }
+  .projeto h1 {
+    font-size: 4rem;
+  }
+  .projeto .alinhamento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  .projeto .projetos {
+    width: 80%;
+    max-width: 400px;
+    padding: 2.5rem;
+  }
+}
+
+/* =============================
+   💼 EXPERIÊNCIA
+   ============================= */
+.exp {
+  padding: 3rem 0;
+  margin-bottom: 5rem;
+  /* 🌸 EXPERIÊNCIA - RESPONSIVO */
+}
+.exp .alinhamento {
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+.exp .exp-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+.exp .exp-title .emphasis {
+  color: var(--primary-color);
+}
+.exp .exp-body {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.exp .empresas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 160px;
+  position: relative;
+  padding-left: 1.5rem;
+}
+.exp .empresas::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+.exp .empresas .empresa {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  color: #666;
+  text-align: left;
+  transition: color 0.18s;
+}
+.exp .empresas .empresa.ativa {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.exp .descricao {
+  flex: 1;
+}
+.exp .descricao .conteudo {
+  display: none;
+}
+.exp .descricao .conteudo.ativo {
+  display: block;
+}
+@media (max-width: 840px) {
+  .exp .exp-body {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .exp .empresas {
+    flex-direction: row;
+    gap: 1rem;
+    min-width: auto;
+  }
+  .exp .empresas .empresa {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* =============================
+   🌷 HABILIDADES
+   ============================= */
+.habilidades {
+  margin-bottom: 5rem;
+  /* 🌸 HABILIDADES - MOBILE */
+  /* 💻 HABILIDADES - TABLET */
+}
+.habilidades .hab-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+.habilidades .hab-title .emphasis {
+  color: var(--primary-color);
+}
+.habilidades .body {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: space-around;
+}
+.habilidades .body div h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+.habilidades .body div p {
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .habilidades {
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+  }
+  .habilidades .hab-title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  .habilidades .body {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .habilidades .body div {
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .habilidades {
+    padding: 5rem 4rem;
+  }
+  .habilidades .hab-title {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .habilidades .body {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+  .habilidades .body div {
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+  }
+}
+
+/* =============================
+   💜 HISTÓRIA
+   ============================= */
+.hystory {
+  margin-bottom: 5rem;
+}
+.hystory .hystory-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+.hystory .hystory-title .emphasis {
+  color: var(--primary-color);
+}
+.hystory p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* =============================
+   ⚡ FOOTER
+   ============================= */
+.footer {
+  /* 🌸 FOOTER - MOBILE */
+  /* 💻 FOOTER - TABLET */
+}
+.footer nav {
+  flex: 1;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+.footer nav ul {
+  display: flex;
+  gap: 3rem;
+  justify-content: left;
+  cursor: pointer;
+}
+.footer nav ul li {
+  font-weight: 500;
+}
+.footer nav ul li:hover {
+  color: var(--primary-color);
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .footer nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .footer {
+    padding: 4rem 3rem;
+    text-align: center;
+  }
+  .footer nav ul {
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=main.css.map */

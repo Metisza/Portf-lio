@@ -1,0 +1,601 @@
+/* =============================
+   🌸 RESET & VARIÁVEIS GERAIS
+   ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e782ce;
+  --secondy-color: #24262f;
+  --font-color: #4e525a;
+  --background-color: #f5f5f5;
+}
+
+body {
+  background-image: url("/imagens/background.jpg");
+  color: var(--font-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0 15%;
+
+  .emphasis {
+    color: var(--primary-color);
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+
+  button {
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.75rem;
+    transition: background-color 0.3s ease;
+
+    &.primary {
+      background-color: var(--primary-color);
+      color: #fff;
+    }
+
+    &.outline {
+      background-color: transparent;
+      border: 1px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    &:hover {
+      background-color: var(--primary-color, 60%);
+      border-color: #24262f;
+      color: var(--background-color);
+    }
+  }
+
+  /* =============================
+     💗 HEADER
+     ============================= */
+  header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    nav {
+      flex: 1;
+      font-size: 1.5rem;
+
+      ul {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        cursor: pointer;
+
+        li {
+          font-weight: 500;
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+  }
+
+  /* 🌸 HEADER - MOBILE */
+  @media screen and (max-width: 600px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 2rem;
+      padding: 2rem;
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  /* 💻 HEADER - TABLET */
+  @media screen and (max-width: 1024px) and (min-width: 601px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding: 3rem;
+
+      nav ul {
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1.9rem;
+      }
+    }
+  }
+
+  /* =============================
+     🌷 HERO SECTION
+     ============================= */
+  #hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5rem 0 10rem;
+
+    article {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 2rem;
+      margin-bottom: 5rem;
+
+      .apresentacao-p {
+        p {
+          font-size: 5rem;
+          line-height: 5rem;
+        }
+      }
+
+      .title {
+        color: var(--secondy-color);
+        font-size: 5.5rem;
+        font-weight: bolder;
+        line-height: 3.5rem;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .frame {
+      align-items: center;
+      border: 1px solid var(--primary-color);
+      border-radius: 90%;
+      display: flex;
+      justify-content: center;
+      width: 400px;
+      height: 400px;
+      margin-left: 5rem;
+
+      img {
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  /* 🌸 HERO - MOBILE */
+  @media screen and (max-width: 600px) {
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      text-align: center;
+
+      .frame {
+        order: -1;
+        margin-left: 0;
+        width: 250px;
+        height: 250px;
+      }
+
+      article {
+        order: 2;
+
+        .apresentacao-p p,
+        .title {
+          font-size: 3rem;
+          line-height: 3rem;
+        }
+
+        .buttons {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  /* 💻 HERO - TABLET */
+  @media screen and (max-width: 1024px) and (min-width: 601px) {
+    #hero {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      gap: 4rem;
+      margin: 4rem 0 8rem;
+
+      .frame {
+        margin-left: 0;
+        width: 320px;
+        height: 320px;
+      }
+
+      article {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 1.8rem;
+
+        .apresentacao-p p {
+          font-size: 4rem;
+          line-height: 4rem;
+        }
+
+        .title {
+          font-size: 4.8rem;
+          line-height: 3.8rem;
+        }
+
+        .buttons {
+          justify-content: center;
+          gap: 1.2rem;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+/* =============================
+   💻 PROJETOS
+   ============================= */
+.projeto {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  text-align: left;
+
+  h1 {
+    margin-bottom: 3rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    .emphasis {
+      color: var(--primary-color);
+    }
+  }
+
+  .alinhamento {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    justify-content: center;
+  }
+
+  .projetos {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: left;
+
+    img {
+      width: 100%;
+      height: 250px;
+      border-radius: 1.5rem;
+      object-fit: cover;
+      display: block;
+    }
+
+    .subtitulo {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  /* 🌸 PROJETOS - MOBILE */
+  @media screen and (max-width: 600px) {
+    padding: 4rem 2rem;
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .alinhamento {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .projetos {
+      width: 100%;
+      max-width: 350px;
+      padding: 2rem;
+      text-align: center;
+    }
+  }
+
+  /* 💻 PROJETOS - TABLET */
+  @media screen and (max-width: 1024px) and (min-width: 601px) {
+    padding: 5rem 4rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    .alinhamento {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .projetos {
+      width: 80%;
+      max-width: 400px;
+      padding: 2.5rem;
+    }
+  }
+}
+
+/* =============================
+   💼 EXPERIÊNCIA
+   ============================= */
+.exp {
+  padding: 3rem 0;
+  margin-bottom: 5rem;
+
+  .alinhamento {
+    max-width: 1100px;
+    padding: 0 1rem;
+  }
+
+  .exp-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+
+    .emphasis {
+      color: var(--primary-color);
+    }
+  }
+
+  .exp-body {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .empresas {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 160px;
+    position: relative;
+    padding-left: 1.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background-color: var(--primary-color);
+      border-radius: 2px;
+    }
+
+    .empresa {
+      background: none;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      color: #666;
+      text-align: left;
+      transition: color 0.18s;
+
+      &.ativa {
+        color: var(--primary-color);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .descricao {
+    flex: 1;
+
+    .conteudo {
+      display: none;
+
+      &.ativo {
+        display: block;
+      }
+    }
+  }
+
+  /* 🌸 EXPERIÊNCIA - RESPONSIVO */
+  @media (max-width: 840px) {
+    .exp-body {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .empresas {
+      flex-direction: row;
+      gap: 1rem;
+      min-width: auto;
+
+      .empresa {
+        padding: 0.25rem 0.5rem;
+      }
+    }
+  }
+}
+
+/* =============================
+   🌷 HABILIDADES
+   ============================= */
+.habilidades {
+  margin-bottom: 5rem;
+
+  .hab-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    .emphasis {
+      color: var(--primary-color);
+    }
+  }
+
+  .body {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-around;
+
+    div {
+      h4 {
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  /* 🌸 HABILIDADES - MOBILE */
+  @media screen and (max-width: 600px) {
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+
+    .hab-title {
+      font-size: 3.5rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .body {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      div {
+        width: 90%;
+        max-width: 350px;
+        text-align: center;
+      }
+    }
+  }
+
+  /* 💻 HABILIDADES - TABLET */
+  @media screen and (max-width: 1024px) and (min-width: 601px) {
+    padding: 5rem 4rem;
+
+    .hab-title {
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    .body {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+
+      div {
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* =============================
+   💜 HISTÓRIA
+   ============================= */
+.hystory {
+  margin-bottom: 5rem;
+
+  .hystory-title {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    margin-bottom: 1.5rem;
+
+    .emphasis {
+      color: var(--primary-color);
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+}
+
+/* =============================
+   ⚡ FOOTER
+   ============================= */
+.footer {
+  nav {
+    flex: 1;
+    font-size: 1.5rem;
+    margin-bottom: 5rem;
+
+    ul {
+      display: flex;
+      gap: 3rem;
+      justify-content: left;
+      cursor: pointer;
+
+      li {
+        font-weight: 500;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  /* 🌸 FOOTER - MOBILE */
+  @media screen and (max-width: 600px) {
+    padding: 3rem 2rem;
+    text-align: center;
+
+    nav ul {
+      flex-direction: column;
+      gap: 1.5rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  /* 💻 FOOTER - TABLET */
+  @media screen and (max-width: 1024px) and (min-width: 601px) {
+    padding: 4rem 3rem;
+    text-align: center;
+
+    nav ul {
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 1.8rem;
+    }
+  }
+}
