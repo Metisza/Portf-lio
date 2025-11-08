@@ -388,7 +388,7 @@ body .habilidades {
 body .habilidades .hab-title {
   font-size: clamp(3rem, 5vw, 4rem);
   margin-bottom: 3.5rem;
-  text-align: center;
+  text-align: left;
   letter-spacing: 0.5px;
 }
 body .habilidades .hab-title .emphasis {
