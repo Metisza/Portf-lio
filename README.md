@@ -21,8 +21,8 @@ Meu objetivo é demonstrar não apenas o domínio de ferramentas e tecnologias, 
 - **Contato / Footer** — Links para redes sociais e formas de contato
 
 - [Como visualizar](#como-visualizar)
-  
- [https://metisza.github.io/Portf-lio/](https://metisza.github.io/Portfolio/)
+
+ https://metisza.github.io/Portfolio/
 
 - [Contato](#contato)
 - 📧 **E-mail:** [brunalemes2503@gmail.com] 
