@@ -271,7 +271,7 @@ body {
 
   h1 {
     margin-bottom: 3rem;
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-size: clamp(3rem, 5vw, 4rem);
 
     .emphasis {
       color: var(--primary-color);
@@ -369,7 +369,7 @@ body {
   }
 
   .exp-title {
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-size: clamp(3rem, 5vw, 4rem);
     margin-bottom: 1.5rem;
 
     .emphasis {
@@ -443,6 +443,10 @@ body {
       gap: 1rem;
       min-width: auto;
 
+      .hab-title{
+        font-size: 4rem;
+      }
+
       .empresa {
         padding: 0.25rem 0.5rem;
       }
@@ -457,7 +461,7 @@ body {
   margin-bottom: 5rem;
 
   .hab-title {
-    font-size: clamp(2.4rem, 5vw, 4rem);
+    font-size: clamp(3rem, 5vw, 4rem);
 
     .emphasis {
       color: var(--primary-color);
@@ -484,7 +488,6 @@ body {
 
   /* 🌸 HABILIDADES - MOBILE */
   @media screen and (max-width: 600px) {
-    padding: 4rem 2rem;
     margin-top: 3rem;
 
     .hab-title {

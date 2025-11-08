@@ -240,7 +240,7 @@ body #hero .frame img {
 }
 .projeto h1 {
   margin-bottom: 3rem;
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 .projeto h1 .emphasis {
   color: var(--primary-color);
@@ -326,7 +326,7 @@ body #hero .frame img {
   padding: 0 1rem;
 }
 .exp .exp-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
   margin-bottom: 1.5rem;
 }
 .exp .exp-title .emphasis {
@@ -388,6 +388,9 @@ body #hero .frame img {
     gap: 1rem;
     min-width: auto;
   }
+  .exp .empresas .hab-title {
+    font-size: 4rem;
+  }
   .exp .empresas .empresa {
     padding: 0.25rem 0.5rem;
   }
@@ -402,7 +405,7 @@ body #hero .frame img {
   /* 💻 HABILIDADES - TABLET */
 }
 .habilidades .hab-title {
-  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-size: clamp(3rem, 5vw, 4rem);
 }
 .habilidades .hab-title .emphasis {
   color: var(--primary-color);
@@ -422,7 +425,6 @@ body #hero .frame img {
 }
 @media screen and (max-width: 600px) {
   .habilidades {
-    padding: 4rem 2rem;
     margin-top: 3rem;
   }
   .habilidades .hab-title {
