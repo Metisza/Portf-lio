@@ -22,7 +22,7 @@ Meu objetivo é demonstrar não apenas o domínio de ferramentas e tecnologias, 
 
 - [Como visualizar](#como-visualizar)
 
-https://metisza.github.io/Portfolio/
+ https://metisza.github.io/Portfolio/
 
 - [Contato](#contato)
 - 📧 **E-mail:** [brunalemes2503@gmail.com] 
